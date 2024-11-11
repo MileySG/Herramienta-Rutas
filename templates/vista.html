@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herramienta de Digitalización de Rutas</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div id="app-container">
+        <!-- Encabezado -->
+        <header>
+            <h1>Digitalización de Rutas de Transporte</h1>
+        </header>
+
+        <!-- Sección de carga de archivo -->
+        <div class="section">
+            <h2>Cargar archivo Excel</h2>
+            <input type="file" id="file-input" accept=".xlsx">
+            <button id="upload-button">Cargar archivo</button>
+            <div id="file-info"></div>
+        </div>
+
+        <!-- Barra de progreso -->
+        <div class="section">
+            <h2>Progreso de procesamiento</h2>
+            <div id="progress-bar-container">
+                <progress id="progress-bar" value="0" max="100"></progress>
+                <span id="progress-text">0%</span>
+            </div>
+        </div>
+
+        <!-- Sección de tabla editable -->
+        <div class="section" id="tabla-container">
+            <h2>Tabla de Información Procesada</h2>
+            <div id="tabla-editable"></div>
+        </div>
+
+        <!-- Sección de previsualización del mapa -->
+        <div class="section" id="mapa-container">
+            <h2>Mapa de Previsualización</h2>
+            <div id="map"></div>
+        </div>
+
+        <!-- Botones de acción -->
+        <div class="section">
+            <button id="procesar-button">Procesar Archivo</button>
+            <button id="guardar-button">Guardar y Exportar Archivo Final</button>
+        </div>
+
+        <!-- Mensaje de confirmación -->
+        <div id="mensaje-confirmacion"></div>
+
+        <script src="/static/script.js"></script>
+    </div>
+</body>
+</html>
